@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="app_string1">hello word</string>
+    <string name="app_strign2">哈哈哈</string>
+    <string name="app_string3">test</string>
+    <string name="app_string4">M特殊</string>
+
+</resources>
