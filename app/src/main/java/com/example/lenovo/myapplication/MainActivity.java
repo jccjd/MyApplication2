@@ -20,7 +20,14 @@ public class MainActivity extends AppCompatActivity {
         sleep = (CheckBox) findViewById(R.id.sleep);
         game = (CheckBox) findViewById(R.id.game);
         all = (CheckBox) findViewById(R.id.all);
-
+        all.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                eate.setChecked(isChecked);
+                sleep.setChecked(isChecked);
+                game.setChecked(isChecked);
+            }
+        });
         /*OnBoxClickListener listener = new OnBoxClickListener();
         eate.setOnClickListener(listener);
         sleep.setOnClickListener(listener);
@@ -31,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         eate.setOnCheckedChangeListener(listenber);
         sleep.setOnCheckedChangeListener(listenber);
         game.setOnCheckedChangeListener(listenber);
+
     }
     class CheckBoxListenber implements CompoundButton.OnCheckedChangeListener {
 
@@ -43,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             } else if (buttonView.getId() == R.id.eatID) {
                 System.out.println("eat");
             }
-
             if (isChecked) {
                 System.out.println("checked");
             } else {
