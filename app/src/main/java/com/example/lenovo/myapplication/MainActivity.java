@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             if (box.isChecked()) {
                 System.out.println("checked");
             } else {
-                System.out.println("unchecked");
+               s System.out.println("unchecked");
             }
 
 
