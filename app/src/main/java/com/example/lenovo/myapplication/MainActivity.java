@@ -28,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if (v.getId() == )
+            if (v.getId() == R.id.eatID) {
+                System.out.println("Clickidbox");
+            } else if (v.getId() == R.id.sleep) {
+                System.out.println("Click sleep box");
+            } else if (v.getId() == R.id.game){
+                System.out.println("Click game box");
+            }
+
+
 
 
             System.out.println("Checkbox");
