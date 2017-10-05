@@ -28,14 +28,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if (v.getId() == R.id.eatID) {
+            CheckBox box = (CheckBox)v;
+
+
+            if (box.getId() == R.id.eatID) {
                 System.out.println("Clickidbox");
-            } else if (v.getId() == R.id.sleep) {
+            } else if (box.getId() == R.id.sleep) {
                 System.out.println("Click sleep box");
-            } else if (v.getId() == R.id.game){
+            } else if (box.getId() == R.id.game){
                 System.out.println("Click game box");
             }
-
+            if (box.isChecked()) {
+                System.out.println("checked");
+            } else {
+                System.out.println("unchecked");
+            }
 
 
 
