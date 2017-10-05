@@ -32,18 +32,15 @@
     />
     <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:id="@+id/sleep"
-
               android:text="睡觉"
     />
     <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:id="@+id/game"
-
               android:text="游戏"
     />
     <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:id="@+id/all"
-
-                  android:text="全选"
+              android:text="全选"
     />
 
 </LinearLayout>

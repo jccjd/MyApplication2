@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox eate;
     private CheckBox sleep;
     private CheckBox game;
-
+    private CheckBox all;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         eate = (CheckBox)findViewById(R.id.eatID);
         sleep = (CheckBox) findViewById(R.id.sleep);
         game = (CheckBox) findViewById(R.id.game);
+        all = (CheckBox) findViewById(R.id.all);
+
         /*OnBoxClickListener listener = new OnBoxClickListener();
         eate.setOnClickListener(listener);
         sleep.setOnClickListener(listener);
