@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,13 +19,42 @@ public class MainActivity extends AppCompatActivity {
         eate = (CheckBox)findViewById(R.id.eatID);
         sleep = (CheckBox) findViewById(R.id.sleep);
         game = (CheckBox) findViewById(R.id.game);
-        OnBoxClickListener listener = new OnBoxClickListener();
+        /*OnBoxClickListener listener = new OnBoxClickListener();
         eate.setOnClickListener(listener);
         sleep.setOnClickListener(listener);
         game.setOnClickListener(listener);
+*/
 
+        CheckBoxListenber listenber = new CheckBoxListenber();
+        eate.setOnCheckedChangeListener(listenber);
+        sleep.setOnCheckedChangeListener(listenber);
+        game.setOnCheckedChangeListener(listenber);
     }
-    class OnBoxClickListener implements View.OnClickListener {
+    class CheckBoxListenber implements CompoundButton.OnCheckedChangeListener {
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (buttonView.getId() == R.id.game) {
+                System.out.println("game");
+            } else if (buttonView.getId() == R.id.sleep) {
+                System.out.println("sleep");
+            } else if (buttonView.getId() == R.id.eatID) {
+                System.out.println("eat");
+            }
+
+            if (isChecked) {
+                System.out.println("checked");
+            } else {
+                System.out.println("unchecked");
+            }
+        }
+    }
+
+
+
+
+    //OnClickListener的使用方法
+  /*  class OnBoxClickListener implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
@@ -48,5 +78,5 @@ public class MainActivity extends AppCompatActivity {
 
             System.out.println("Checkbox");
         }
-    }
+    }*/
 }
